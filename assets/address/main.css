@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Abel;
+}
+
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+body {
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a {
+  padding: 0;
+  margin: 0;
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: unset;
+}
+
+p {
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+button {
+  outline: none;
+  border: none;
+  border: transparent;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+label {
+  display: inline-flex;
+  margin-bottom: 5px;
+  color: var(--color-text-light);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+input {
+  text-decoration: none;
+  outline: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-main);
+}
+
+img {
+  max-width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-view-transition {
+  view-transition-name: custom-view-transition;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slide-from-right {
+  from {
+    transform: translateX(30px);
+  }
+}
+@keyframes slide-to-left {
+  to {
+    transform: translateX(-30px);
+  }
+}
+#customer {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+#desciptionPlace {
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 200;
+  line-height: 15px;
+}
+
+#status {
+  font-family: Montserrat;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 13px;
+  color: var(--color-approved);
+}
+
+#statusDef {
+  font-family: Montserrat;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 13px;
+  color: white;
+}
+
+#addressAddContainer {
+  display: none;
+}
+
+#active-address {
+  width: 100%;
+  padding: 25px;
+}
+#active-address #addressAddContainerInner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#active-address #addressAddContainerInner #personReceive,
+#active-address #addressAddContainerInner #streetAdress,
+#active-address #addressAddContainerInner #state,
+#active-address #addressAddContainerInner #city,
+#active-address #addressAddContainerInner #postalCode {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#active-address #addressAddContainerInner #personReceive span,
+#active-address #addressAddContainerInner #streetAdress span,
+#active-address #addressAddContainerInner #state span,
+#active-address #addressAddContainerInner #city span,
+#active-address #addressAddContainerInner #postalCode span {
+  color: white;
+}
+#active-address #addressAddContainerInner #personReceive input,
+#active-address #addressAddContainerInner #streetAdress input,
+#active-address #addressAddContainerInner #state input,
+#active-address #addressAddContainerInner #city input,
+#active-address #addressAddContainerInner #postalCode input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  background-color: black;
+  padding: 18px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #E4E4E4;
+}
+#active-address #addressAddContainerInner #personReceive input::-moz-placeholder, #active-address #addressAddContainerInner #streetAdress input::-moz-placeholder, #active-address #addressAddContainerInner #state input::-moz-placeholder, #active-address #addressAddContainerInner #city input::-moz-placeholder, #active-address #addressAddContainerInner #postalCode input::-moz-placeholder {
+  color: #E4E4E4;
+}
+#active-address #addressAddContainerInner #personReceive input::placeholder,
+#active-address #addressAddContainerInner #streetAdress input::placeholder,
+#active-address #addressAddContainerInner #state input::placeholder,
+#active-address #addressAddContainerInner #city input::placeholder,
+#active-address #addressAddContainerInner #postalCode input::placeholder {
+  color: #E4E4E4;
+}
+#active-address #addressAddContainerInner #deleteBtn {
+  width: 45%;
+  height: 50px;
+  box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.0588235294);
+  box-shadow: 0px 4px 4px 0px rgba(50, 50, 71, 0.0784313725);
+  border: 1px solid var(--color-main-btn);
+  color: var(--color-main-btn);
+  font-family: Montserrat;
+  font-style: italic;
+  border-radius: 5px;
+}
+#active-address #addressAddContainerInner #saveBtn {
+  width: 45%;
+  height: 50px;
+  box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.0588235294);
+  box-shadow: 0px 4px 4px 0px rgba(50, 50, 71, 0.0784313725);
+  background-color: var(--color-main-btn);
+  font-family: Montserrat;
+  font-style: italic;
+  color: black;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+:root {
+  --color-approved: #00C48C;
+  --color-border: #E4E4E499;
+  --color-main-btn: #6979F8;
+}/*# sourceMappingURL=main.css.map */

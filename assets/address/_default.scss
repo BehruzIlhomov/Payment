@@ -1,0 +1,105 @@
+#customer {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+#desciptionPlace {
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 200;
+    line-height: 15px;
+}
+
+#status {
+    font-family: Montserrat;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 13px;
+    color: var(--color-approved);
+}
+
+#statusDef {
+    font-family: Montserrat;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 13px;
+    color: white;
+}
+
+#addressAddContainer {
+    display: none;
+}
+
+#active-address {
+    width: 100%;
+    padding: 25px;
+
+    #addressAddContainerInner {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        #personReceive,
+        #streetAdress,
+        #state,
+        #city,
+        #postalCode {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            span {
+                color: white;
+            }
+
+            input {
+                width: 100%;
+                height: 50px;
+                border-radius: 5px;
+                border: 1px solid var(--color-border);
+                background-color: black;
+                padding: 18px;
+                font-family: Montserrat;
+                font-style: italic;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 18px;
+                color: #E4E4E4;
+            }
+
+            input::placeholder {
+                color: #E4E4E4;
+            }
+        }
+
+        #deleteBtn {
+            width: 45%;
+            height: 50px;
+            box-shadow: 0px 4px 8px 0px #3232470F;
+            box-shadow: 0px 4px 4px 0px #32324714;
+            border: 1px solid var(--color-main-btn);
+            color: var(--color-main-btn);
+            font-family: Montserrat;
+            font-style: italic;
+            border-radius: 5px;
+        }
+
+        #saveBtn {
+            width: 45%;
+            height: 50px;
+            box-shadow: 0px 4px 8px 0px #3232470F;
+            box-shadow: 0px 4px 4px 0px #32324714;
+            background-color: var(--color-main-btn);
+            font-family: Montserrat;
+            font-style: italic;
+            color: black;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+    }
+}

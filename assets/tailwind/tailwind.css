@@ -558,8 +558,9 @@ video {
   float: left;
 }
 
-.m-5 {
-  margin: 1.25rem;
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 
 .flex {
@@ -582,12 +583,16 @@ video {
   align-items: center;
 }
 
-.justify-center {
-  justify-content: center;
-}
-
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-1\.5 {
+  gap: 0.375rem;
 }
 
 .gap-2 {
@@ -605,6 +610,11 @@ video {
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .py-3 {
@@ -663,15 +673,9 @@ html {
 
 body {
   font-weight: 400;
-  font-family: "Inter", sans-serif;
-  overflow: hidden;
   color: var(--color-text);
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
-  height: 100dvh;
 }
 
 body::-webkit-scrollbar {
@@ -812,8 +816,109 @@ input::-webkit-inner-spin-button {
   color: var(--color-approved);
 }
 
+#statusDef {
+  font-family: Montserrat;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 13px;
+  color: white;
+}
+
+#addressAddContainer {
+  display: none;
+}
+
+#active-address {
+  width: 100%;
+  padding: 25px;
+}
+
+#active-address #addressAddContainerInner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#active-address #addressAddContainerInner #personReceive,
+#active-address #addressAddContainerInner #streetAdress,
+#active-address #addressAddContainerInner #state,
+#active-address #addressAddContainerInner #city,
+#active-address #addressAddContainerInner #postalCode {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#active-address #addressAddContainerInner #personReceive span,
+#active-address #addressAddContainerInner #streetAdress span,
+#active-address #addressAddContainerInner #state span,
+#active-address #addressAddContainerInner #city span,
+#active-address #addressAddContainerInner #postalCode span {
+  color: white;
+}
+
+#active-address #addressAddContainerInner #personReceive input,
+#active-address #addressAddContainerInner #streetAdress input,
+#active-address #addressAddContainerInner #state input,
+#active-address #addressAddContainerInner #city input,
+#active-address #addressAddContainerInner #postalCode input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  background-color: black;
+  padding: 18px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #E4E4E4;
+}
+
+#active-address #addressAddContainerInner #personReceive input::-moz-placeholder, #active-address #addressAddContainerInner #streetAdress input::-moz-placeholder, #active-address #addressAddContainerInner #state input::-moz-placeholder, #active-address #addressAddContainerInner #city input::-moz-placeholder, #active-address #addressAddContainerInner #postalCode input::-moz-placeholder {
+  color: #E4E4E4;
+}
+
+#active-address #addressAddContainerInner #personReceive input::placeholder,
+#active-address #addressAddContainerInner #streetAdress input::placeholder,
+#active-address #addressAddContainerInner #state input::placeholder,
+#active-address #addressAddContainerInner #city input::placeholder,
+#active-address #addressAddContainerInner #postalCode input::placeholder {
+  color: #E4E4E4;
+}
+
+#active-address #addressAddContainerInner #deleteBtn {
+  width: 45%;
+  height: 50px;
+  box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.0588235294);
+  box-shadow: 0px 4px 4px 0px rgba(50, 50, 71, 0.0784313725);
+  border: 1px solid var(--color-main-btn);
+  color: var(--color-main-btn);
+  font-family: Montserrat;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+#active-address #addressAddContainerInner #saveBtn {
+  width: 45%;
+  height: 50px;
+  box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.0588235294);
+  box-shadow: 0px 4px 4px 0px rgba(50, 50, 71, 0.0784313725);
+  background-color: var(--color-main-btn);
+  font-family: Montserrat;
+  font-style: italic;
+  color: black;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
 :root {
   --color-approved: #00C48C;
   --color-border: #E4E4E499;
+  --color-main-btn: #6979F8;
 }
 /*# sourceMappingURL=tailwind.css.map */

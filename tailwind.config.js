@@ -1,5 +1,5 @@
 export const content = [
-  './assets/*.html'
+  './address-book/*.html'
 ];
 export const theme = {
   extend: {},
