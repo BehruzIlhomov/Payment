@@ -1,5 +1,6 @@
 export const content = [
-  './address-book/*.html'
+  './address-book/*.html',
+  './payment-methods/*.html'
 ];
 export const theme = {
   extend: {},

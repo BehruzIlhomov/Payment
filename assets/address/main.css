@@ -146,6 +146,14 @@ input::-webkit-inner-spin-button {
   line-height: 25px;
 }
 
+#currentPlaceContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 14px;
+  width: 100%;
+}
+
 #desciptionPlace {
   font-family: Montserrat;
   font-size: 10px;
@@ -175,36 +183,36 @@ input::-webkit-inner-spin-button {
   display: none;
 }
 
-#active-address {
+#addressAddContainer.active-address {
   width: 100%;
   padding: 25px;
 }
-#active-address #addressAddContainerInner {
+#addressAddContainer.active-address #addressAddContainerInner {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-#active-address #addressAddContainerInner #personReceive,
-#active-address #addressAddContainerInner #streetAdress,
-#active-address #addressAddContainerInner #state,
-#active-address #addressAddContainerInner #city,
-#active-address #addressAddContainerInner #postalCode {
+#addressAddContainer.active-address #addressAddContainerInner #personReceive,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress,
+#addressAddContainer.active-address #addressAddContainerInner #state,
+#addressAddContainer.active-address #addressAddContainerInner #city,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-#active-address #addressAddContainerInner #personReceive span,
-#active-address #addressAddContainerInner #streetAdress span,
-#active-address #addressAddContainerInner #state span,
-#active-address #addressAddContainerInner #city span,
-#active-address #addressAddContainerInner #postalCode span {
+#addressAddContainer.active-address #addressAddContainerInner #personReceive span,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress span,
+#addressAddContainer.active-address #addressAddContainerInner #state span,
+#addressAddContainer.active-address #addressAddContainerInner #city span,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode span {
   color: white;
 }
-#active-address #addressAddContainerInner #personReceive input,
-#active-address #addressAddContainerInner #streetAdress input,
-#active-address #addressAddContainerInner #state input,
-#active-address #addressAddContainerInner #city input,
-#active-address #addressAddContainerInner #postalCode input {
+#addressAddContainer.active-address #addressAddContainerInner #personReceive input,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress input,
+#addressAddContainer.active-address #addressAddContainerInner #state input,
+#addressAddContainer.active-address #addressAddContainerInner #city input,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode input {
   width: 100%;
   height: 50px;
   border-radius: 5px;
@@ -218,17 +226,17 @@ input::-webkit-inner-spin-button {
   line-height: 18px;
   color: #E4E4E4;
 }
-#active-address #addressAddContainerInner #personReceive input::-moz-placeholder, #active-address #addressAddContainerInner #streetAdress input::-moz-placeholder, #active-address #addressAddContainerInner #state input::-moz-placeholder, #active-address #addressAddContainerInner #city input::-moz-placeholder, #active-address #addressAddContainerInner #postalCode input::-moz-placeholder {
+#addressAddContainer.active-address #addressAddContainerInner #personReceive input::-moz-placeholder, #addressAddContainer.active-address #addressAddContainerInner #streetAdress input::-moz-placeholder, #addressAddContainer.active-address #addressAddContainerInner #state input::-moz-placeholder, #addressAddContainer.active-address #addressAddContainerInner #city input::-moz-placeholder, #addressAddContainer.active-address #addressAddContainerInner #postalCode input::-moz-placeholder {
   color: #E4E4E4;
 }
-#active-address #addressAddContainerInner #personReceive input::placeholder,
-#active-address #addressAddContainerInner #streetAdress input::placeholder,
-#active-address #addressAddContainerInner #state input::placeholder,
-#active-address #addressAddContainerInner #city input::placeholder,
-#active-address #addressAddContainerInner #postalCode input::placeholder {
+#addressAddContainer.active-address #addressAddContainerInner #personReceive input::placeholder,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress input::placeholder,
+#addressAddContainer.active-address #addressAddContainerInner #state input::placeholder,
+#addressAddContainer.active-address #addressAddContainerInner #city input::placeholder,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode input::placeholder {
   color: #E4E4E4;
 }
-#active-address #addressAddContainerInner #deleteBtn {
+#addressAddContainer.active-address #addressAddContainerInner #deleteBtn {
   width: 45%;
   height: 50px;
   box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.0588235294);
@@ -239,7 +247,7 @@ input::-webkit-inner-spin-button {
   font-style: italic;
   border-radius: 5px;
 }
-#active-address #addressAddContainerInner #saveBtn {
+#addressAddContainer.active-address #addressAddContainerInner #saveBtn {
   width: 45%;
   height: 50px;
   box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.0588235294);
@@ -252,6 +260,13 @@ input::-webkit-inner-spin-button {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+}
+
+#paymentType {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 15px;
 }
 
 :root {
