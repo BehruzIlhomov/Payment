@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentPlaceContainer = document.getElementById("currentPlaceContainer");
     const addressAddContainer = document.getElementById("addressAddContainer");
     const deleteBtn = document.getElementById("deleteBtn");
+    const personReceiveInp = document.getElementById("personReceiveInp");
+    const streetAdressInp = document.getElementById("streetAdressInp");
+    const stateInp = document.getElementById("stateInp");
+    const cityInp = document.getElementById("cityInp");
+    const postalCodeInp = document.getElementById("postalCodeInp");
 
     addAddressBtn.addEventListener("click", function () {
         addressesContainer.style.display = "none";
@@ -16,6 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     deleteBtn.addEventListener("click", function () {
+        personReceiveInp.value = "";
+        streetAdressInp.value = "";
+        stateInp.value = "";
+        cityInp.value = "";
+        postalCodeInp.value = "";
+
         addressAddContainer.style.display = "none";
         addressesContainer.style.display = "block";
         addAddressBtn.style.display = "inline-block";

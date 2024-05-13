@@ -90,24 +90,29 @@
     <div id="addressAddContainer">
         <div id="addressAddContainerInner">
             <div id="personReceive">
-                <span>Full Name</span>
+                <span id="descAddress">Full Name</span>
                 <input placeholder="Name..." type="text" id="personReceiveInp">
+                <h4 id="invalidText">Invalid name</h4>
             </div>
             <div id="streetAdress">
-                <span>Street Address</span>
+                <span id="descAddress">Street Address</span>
                 <input placeholder="Address..." type="text" id="streetAdressInp">
+                <h4 id="invalidText">Invalid Street Address</h4>
             </div>
             <div id="state">
-                <span>State</span>
+                <span id="descAddress">State</span>
                 <input placeholder="State" type="text" id="stateInp">
+                <h4 id="invalidText">Invalid State</h4>
             </div>
             <div id="city">
-                <span>City</span>
+                <span id="descAddress">City</span>
                 <input placeholder="City" type="text" id="cityInp">
+                <h4 id="invalidText">Invalid City</h4>
             </div>
             <div id="postalCode">
-                <span>Postal Code</span>
-                <input placeholder="Postal Code" type="text" id="postalCodeInp">
+                <span id="descAddress">Postal Code</span>
+                <input id="postalCodeInp" placeholder="Postal Code" type="email">
+                <h4 id="invalidText"></h4>
             </div>
             <div class="flex items-center justify-between">
                 <button id="deleteBtn">Delete</button>
