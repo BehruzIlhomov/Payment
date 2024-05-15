@@ -69,11 +69,31 @@
   flex-direction: column;
   gap: 10px;
 }
-#addressAddContainer.active-address #addressAddContainerInner #personReceive #invalidText,
-#addressAddContainer.active-address #addressAddContainerInner #streetAdress #invalidText,
-#addressAddContainer.active-address #addressAddContainerInner #state #invalidText,
-#addressAddContainer.active-address #addressAddContainerInner #city #invalidText,
-#addressAddContainer.active-address #addressAddContainerInner #postalCode #invalidText {
+#addressAddContainer.active-address #addressAddContainerInner #personReceive #invalidName,
+#addressAddContainer.active-address #addressAddContainerInner #personReceive #invalidStreet,
+#addressAddContainer.active-address #addressAddContainerInner #personReceive #invalidState,
+#addressAddContainer.active-address #addressAddContainerInner #personReceive #invalidCity,
+#addressAddContainer.active-address #addressAddContainerInner #personReceive #invalidPostalCode,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress #invalidName,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress #invalidStreet,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress #invalidState,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress #invalidCity,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress #invalidPostalCode,
+#addressAddContainer.active-address #addressAddContainerInner #state #invalidName,
+#addressAddContainer.active-address #addressAddContainerInner #state #invalidStreet,
+#addressAddContainer.active-address #addressAddContainerInner #state #invalidState,
+#addressAddContainer.active-address #addressAddContainerInner #state #invalidCity,
+#addressAddContainer.active-address #addressAddContainerInner #state #invalidPostalCode,
+#addressAddContainer.active-address #addressAddContainerInner #city #invalidName,
+#addressAddContainer.active-address #addressAddContainerInner #city #invalidStreet,
+#addressAddContainer.active-address #addressAddContainerInner #city #invalidState,
+#addressAddContainer.active-address #addressAddContainerInner #city #invalidCity,
+#addressAddContainer.active-address #addressAddContainerInner #city #invalidPostalCode,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode #invalidName,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode #invalidStreet,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode #invalidState,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode #invalidCity,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode #invalidPostalCode {
   display: none;
   color: red;
   font-family: Montserrat;

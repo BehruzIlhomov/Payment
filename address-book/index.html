@@ -24,7 +24,7 @@
         <img id="addAdress" src="../assets/Img/plus.svg" alt="">
     </div>
     <div id="addressesContainer" class="mx-5">
-        <div>
+        <div id="innerContainerAddress">
             <div style="border-bottom: 0.5px solid var(--color-border);" class="flex justify-between py-5 text-white">
                 <div class="flex items-start gap-5">
                     <div>
@@ -92,27 +92,27 @@
             <div id="personReceive">
                 <span id="descAddress">Full Name</span>
                 <input placeholder="Name..." type="text" id="personReceiveInp">
-                <h4 id="invalidText">Invalid name</h4>
+                <h4 id="invalidName">Invalid name</h4>
             </div>
             <div id="streetAdress">
                 <span id="descAddress">Street Address</span>
                 <input placeholder="Address..." type="text" id="streetAdressInp">
-                <h4 id="invalidText">Invalid Street Address</h4>
+                <h4 id="invalidStreet">Invalid Street Address</h4>
             </div>
             <div id="state">
                 <span id="descAddress">State</span>
                 <input placeholder="State" type="text" id="stateInp">
-                <h4 id="invalidText">Invalid State</h4>
+                <h4 id="invalidState">Invalid State</h4>
             </div>
             <div id="city">
                 <span id="descAddress">City</span>
                 <input placeholder="City" type="text" id="cityInp">
-                <h4 id="invalidText">Invalid City</h4>
+                <h4 id="invalidCity">Invalid City</h4>
             </div>
             <div id="postalCode">
                 <span id="descAddress">Postal Code</span>
                 <input id="postalCodeInp" placeholder="Postal Code" type="email">
-                <h4 id="invalidText"></h4>
+                <h4 id="invalidPostalCode"></h4>
             </div>
             <div class="flex items-center justify-between">
                 <button id="deleteBtn">Delete</button>

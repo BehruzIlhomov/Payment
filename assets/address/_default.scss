@@ -59,7 +59,11 @@
             flex-direction: column;
             gap: 10px;
 
-            #invalidText {
+            #invalidName,
+            #invalidStreet,
+            #invalidState,
+            #invalidCity, 
+            #invalidPostalCode {
                 display: none;
                 color: red;
                 font-family: Montserrat;
