@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const postalCodeOrEmailRegex = /^[0-9]{5}(?:-[0-9]{4})?$|^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
         if (postalCodeInp.value.trim() === "") {
-            invalidPostalCode.textContent = "Postal Code or Email is required";
+            invalidPostalCode.textContent = "Postal Code is required";
             invalidPostalCode.style.display = "block";
             isValid = false;
         } else if (!postalCodeOrEmailRegex.test(postalCodeInp.value.trim())) {
-            invalidPostalCode.textContent = "Invalid Postal Code or Email";
+            invalidPostalCode.textContent = "Invalid Postal Code";
             invalidPostalCode.style.display = "block";
             isValid = false;
         } else {
@@ -72,13 +72,31 @@ document.addEventListener("DOMContentLoaded", function () {
         const customerName = personReceiveInp.value;
         const addressDescription = `${streetAdressInp.value}, ${stateInp.value}, ${cityInp.value}`;
         const newAddressCardHTML = `
-            <div class="flex justify-between py-5 text-white" style="border-bottom: 0.5px solid var(--color-border);">
-                <div id="customer" style="font-size: 20px; font-weight: 400; line-height: 25px;">${customerName}</div>
-                <div id="desciptionPlace" style="font-family: Montserrat; font-size: 10px; font-weight: 200; line-height: 15px;">${addressDescription}</div>
+        <div style="border-bottom: 0.5px solid var(--color-border);" class="flex justify-between py-5 text-white">
+        <div class="flex items-start gap-5">
+            <div>
+                <img src="../assets/Img/map.svg" alt="">
             </div>
+            <div class="flex flex-col float-left gap-2.5">
+                <span id="customer">${customerName}</span>
+                <p id="desciptionPlace">${addressDescription}</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-1.5">
+            <img src="../assets/Img/flag.svg" alt="">
+            <button id="statusDef">DEFAULT</button>
+        </div>
+    </div>
         `;
 
-        addressesContainer.innerHTML += newAddressCardHTML;
+        const innerContainerAddress = document.getElementById("innerContainerAddress");
+        innerContainerAddress.innerHTML += newAddressCardHTML;
+
+        personReceiveInp.value = "";
+        streetAdressInp.value = "";
+        stateInp.value = "";
+        cityInp.value = "";
+        postalCodeInp.value = "";
 
         addressAddContainer.style.display = "none";
         addressesContainer.style.display = "block";
@@ -86,13 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
         currentPlaceWeb.textContent = "Address Book";
         currentPlaceContainer.style.justifyContent = "space-between";
         addressAddContainer.classList.remove("active-address");
-
-        personReceiveInp.value = "";
-        streetAdressInp.value = "";
-        stateInp.value = "";
-        cityInp.value = "";
-        postalCodeInp.value = "";
     }
+
 
 
     addAddressBtn.addEventListener("click", function () {
