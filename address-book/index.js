@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         addresses.push(newAddress);
-        renderAddressCard(newAddress); // Only render the new card
+        renderAddressCard(newAddress);
 
         personReceiveInp.value = "";
         streetAdressInp.value = "";
