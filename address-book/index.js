@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const invalidCity = document.getElementById("invalidCity");
     const invalidPostalCode = document.getElementById("invalidPostalCode");
 
+    // Array to store addresses
+    const addresses = [];
+
     function validateInputs() {
         let isValid = true;
 
@@ -64,33 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function createAddressCard() {
-        if (personReceiveInp.value.trim() === "" || streetAdressInp.value.trim() === "" || stateInp.value.trim() === "" || cityInp.value.trim() === "" || postalCodeInp.value.trim() === "") {
-            alert("Please fill in all fields.");
+        if (!validateInputs()) {
             return;
         }
 
-        const customerName = personReceiveInp.value;
-        const addressDescription = `${streetAdressInp.value}, ${stateInp.value}, ${cityInp.value}`;
-        const newAddressCardHTML = `
-        <div style="border-bottom: 0.5px solid var(--color-border);" class="flex justify-between py-5 text-white">
-        <div class="flex items-start gap-5">
-            <div>
-                <img src="../assets/Img/map.svg" alt="">
-            </div>
-            <div class="flex flex-col float-left gap-2.5">
-                <span id="customer">${customerName}</span>
-                <p id="desciptionPlace">${addressDescription}</p>
-            </div>
-        </div>
-        <div class="flex items-center gap-1.5">
-            <img src="../assets/Img/flag.svg" alt="">
-            <button id="statusDef">DEFAULT</button>
-        </div>
-    </div>
-        `;
+        const newAddress = {
+            customerName: personReceiveInp.value,
+            addressDescription: `${streetAdressInp.value}, ${stateInp.value}, ${cityInp.value}`
+        };
 
-        const innerContainerAddress = document.getElementById("innerContainerAddress");
-        innerContainerAddress.innerHTML += newAddressCardHTML;
+        addresses.push(newAddress);
+        renderAddressCard(newAddress); // Only render the new card
 
         personReceiveInp.value = "";
         streetAdressInp.value = "";
@@ -106,7 +93,31 @@ document.addEventListener("DOMContentLoaded", function () {
         addressAddContainer.classList.remove("active-address");
     }
 
+    function renderAddressCard(address) {
+        const innerContainerAddress = document.getElementById("innerContainerAddress");
 
+        const cardDiv = document.createElement("div");
+        cardDiv.style.borderBottom = "0.5px solid var(--color-border)";
+        cardDiv.className = "flex justify-between py-5 text-white";
+
+        cardDiv.innerHTML = `
+            <div class="flex items-start gap-5">
+                <div>
+                    <img src="../assets/Img/map.svg" alt="">
+                </div>
+                <div class="flex flex-col float-left gap-2.5">
+                    <span id="customer">${address.customerName}</span>
+                    <p id="desciptionPlace">${address.addressDescription}</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-1.5">
+                <img src="../assets/Img/flag.svg" alt="">
+                <button id="statusDef">DEFAULT</button>
+            </div>
+        `;
+
+        innerContainerAddress.appendChild(cardDiv);
+    }
 
     addAddressBtn.addEventListener("click", function () {
         addressesContainer.style.display = "none";
@@ -139,13 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("saveBtn").addEventListener("click", function () {
-        if (validateInputs()) {
-            createAddressCard();
-            personReceiveInp.value = "";
-            streetAdressInp.value = "";
-            stateInp.value = "";
-            cityInp.value = "";
-            postalCodeInp.value = "";
-        }
+        createAddressCard();
     });
 });
