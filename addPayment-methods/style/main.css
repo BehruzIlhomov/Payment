@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Abel;
+}
+
+#customer {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+#currentPlaceContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 14px;
+  width: 100%;
+}
+
+#desciptionPlace {
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 200;
+  line-height: 15px;
+}
+
+#status {
+  font-family: Montserrat;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 13px;
+  color: var(--color-approved);
+}
+
+#statusDef {
+  font-family: Montserrat;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 13px;
+  color: white;
+}
+
+#addressAddContainer {
+  display: none;
+}
+
+#addressAddContainer.active-address {
+  width: 100%;
+  padding: 25px;
+}
+#addressAddContainer.active-address #addressAddContainerInner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#addressAddContainer.active-address #addressAddContainerInner #personReceive,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress,
+#addressAddContainer.active-address #addressAddContainerInner #state,
+#addressAddContainer.active-address #addressAddContainerInner #city,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#addressAddContainer.active-address #addressAddContainerInner #personReceive #invalidName,
+#addressAddContainer.active-address #addressAddContainerInner #personReceive #invalidStreet,
+#addressAddContainer.active-address #addressAddContainerInner #personReceive #invalidState,
+#addressAddContainer.active-address #addressAddContainerInner #personReceive #invalidCity,
+#addressAddContainer.active-address #addressAddContainerInner #personReceive #invalidPostalCode,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress #invalidName,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress #invalidStreet,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress #invalidState,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress #invalidCity,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress #invalidPostalCode,
+#addressAddContainer.active-address #addressAddContainerInner #state #invalidName,
+#addressAddContainer.active-address #addressAddContainerInner #state #invalidStreet,
+#addressAddContainer.active-address #addressAddContainerInner #state #invalidState,
+#addressAddContainer.active-address #addressAddContainerInner #state #invalidCity,
+#addressAddContainer.active-address #addressAddContainerInner #state #invalidPostalCode,
+#addressAddContainer.active-address #addressAddContainerInner #city #invalidName,
+#addressAddContainer.active-address #addressAddContainerInner #city #invalidStreet,
+#addressAddContainer.active-address #addressAddContainerInner #city #invalidState,
+#addressAddContainer.active-address #addressAddContainerInner #city #invalidCity,
+#addressAddContainer.active-address #addressAddContainerInner #city #invalidPostalCode,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode #invalidName,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode #invalidStreet,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode #invalidState,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode #invalidCity,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode #invalidPostalCode {
+  display: none;
+  color: red;
+  font-family: Montserrat;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 400;
+}
+#addressAddContainer.active-address #addressAddContainerInner #personReceive #descAddress,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress #descAddress,
+#addressAddContainer.active-address #addressAddContainerInner #state #descAddress,
+#addressAddContainer.active-address #addressAddContainerInner #city #descAddress,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode #descAddress {
+  color: white;
+}
+#addressAddContainer.active-address #addressAddContainerInner #personReceive input,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress input,
+#addressAddContainer.active-address #addressAddContainerInner #state input,
+#addressAddContainer.active-address #addressAddContainerInner #city input,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  background-color: black;
+  padding: 18px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #E4E4E4;
+}
+#addressAddContainer.active-address #addressAddContainerInner #personReceive input::-moz-placeholder, #addressAddContainer.active-address #addressAddContainerInner #streetAdress input::-moz-placeholder, #addressAddContainer.active-address #addressAddContainerInner #state input::-moz-placeholder, #addressAddContainer.active-address #addressAddContainerInner #city input::-moz-placeholder, #addressAddContainer.active-address #addressAddContainerInner #postalCode input::-moz-placeholder {
+  color: #E4E4E4;
+}
+#addressAddContainer.active-address #addressAddContainerInner #personReceive input::placeholder,
+#addressAddContainer.active-address #addressAddContainerInner #streetAdress input::placeholder,
+#addressAddContainer.active-address #addressAddContainerInner #state input::placeholder,
+#addressAddContainer.active-address #addressAddContainerInner #city input::placeholder,
+#addressAddContainer.active-address #addressAddContainerInner #postalCode input::placeholder {
+  color: #E4E4E4;
+}
+#addressAddContainer.active-address #addressAddContainerInner #deleteBtn {
+  width: 45%;
+  height: 50px;
+  box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.0588235294);
+  box-shadow: 0px 4px 4px 0px rgba(50, 50, 71, 0.0784313725);
+  border: 1px solid var(--color-main-btn);
+  color: var(--color-main-btn);
+  font-family: Montserrat;
+  font-style: italic;
+  border-radius: 5px;
+}
+#addressAddContainer.active-address #addressAddContainerInner #saveBtn {
+  width: 45%;
+  height: 50px;
+  box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.0588235294);
+  box-shadow: 0px 4px 4px 0px rgba(50, 50, 71, 0.0784313725);
+  background-color: var(--color-main-btn);
+  font-family: Montserrat;
+  font-style: italic;
+  color: black;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+#paymentType {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+:root {
+  --color-approved: #00C48C;
+  --color-border: #E4E4E499;
+  --color-main-btn: #6979F8;
+}/*# sourceMappingURL=main.css.map */
